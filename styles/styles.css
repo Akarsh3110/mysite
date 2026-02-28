@@ -279,7 +279,7 @@ button.button.accent:disabled:focus-visible {
 }
 
 main img {
-  max-width: 100%;
+  /* max-width: 100%; */
   width: auto;
   height: auto;
 }
@@ -301,18 +301,20 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+  /* max-width: 1200px; */
+  max-width: 100%;
+  /* margin: auto;
+  padding: 0 24px; */
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
+@media (width : 900px) {
   main > .section > div {
-    padding: 0 32px;
+    /* padding: 0 32px; */
+    overflow-x: hidden;
   }
 }
 
@@ -322,4 +324,11 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+  main {
+    overflow-x: hidden;
+  }
 }

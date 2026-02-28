@@ -1,4 +1,4 @@
-footer {
+/* footer {
   background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
@@ -16,5 +16,116 @@ footer .footer p {
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+} */
+
+footer {
+  background: #202020;
+  color: #ebebeb;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 60px 40px 60px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-between; */
+  gap: 40px;
+}
+
+
+.footer-left p {
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-family:"Source Sans 3", Arial, Helvetica, sans-serif;
+}
+.footer-left p:first-child{
+  margin-right: 200px;
+}
+
+.footer-left p:hover {
+  text-decoration: underline;
+}
+
+/* Logo size */
+.footer-left .icon-wknd-logo-light img {
+  width: 160px;
+  height: 48px;
+  /* margin-right: 80px; */
+}
+
+/* Right section */
+.footer-right {
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  /* gap: 15px; */
+}
+
+.footer-right p:first-child {
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 40px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+}
+
+.footer-right p:not(:first-child) {
+  background: #ebebeb;
+  color: #202020;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 4px; */
+  cursor: pointer;
+  gap: 0;
+}
+
+/* .footer-right p:not(:first-child):hover {
+  background: #202020;
+} */
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #f7f7f7;
+  text-align: justify;
+}
+
+/* @media (width >= 900px) { */
+@media (width :900px) {
+  footer .footer > div {
+    padding: 40px 32px 24px;
+  }
+  .footer-top{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-top>.footer-right p{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-right p:not(:first-child){
+    display: flex;
   }
 }
