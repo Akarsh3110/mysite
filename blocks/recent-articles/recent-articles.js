@@ -1,15 +1,3 @@
-// export default function decorate(block) {
-//   [...block.children].forEach(card => {
-//     const link = card.querySelector('a');
-//     if (link) {
-//       card.style.cursor = 'pointer';
-//       card.addEventListener('click', () => {
-//         window.location = link.href;
-//       });
-//     }
-//   });
-// }
-
 export default function decorate(block) {
 
   //  Entire cards  are clickable

@@ -1,8 +1,8 @@
 export default async function decorate(block) {
   //  DEBUG: log what the block actually contains 
-  console.log('=== CAROUSEL BLOCK HTML ===');
-  console.log(block.innerHTML);
-  console.log('Number of direct children (rows):', block.children.length);
+  // console.log('=== CAROUSEL BLOCK HTML ===');
+  // console.log(block.innerHTML);
+  // console.log('Number of direct children (rows):', block.children.length);
   [...block.children].forEach((row, i) => {
     console.log(`Row ${i}:`, row.outerHTML.substring(0, 200));
   });
@@ -10,7 +10,7 @@ export default async function decorate(block) {
   //  Collect ALL pictures anywhere in the block 
   // This handles any authoring structure — single cell, multi-cell, nested divs
   const allPictures = [...block.querySelectorAll('picture')];
-  console.log('Total pictures found:', allPictures.length);
+  // console.log('Total pictures found:', allPictures.length);
 
   // Also collect any text data from rows (for title/desc/button)
   const rows = [...block.children];

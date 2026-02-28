@@ -6,7 +6,7 @@ export default async function decorate(block) {
   const data = await response.json();
 
   const items = data.data || data;
-  console.log(items,"ok")
+  // console.log(items,"ok")
 
   //  HEADING 
   const headingWrapper = document.createElement('div');
