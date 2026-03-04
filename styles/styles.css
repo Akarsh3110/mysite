@@ -303,6 +303,7 @@ main > .section {
 main > .section > div {
   /* max-width: 1200px; */
   max-width: 100%;
+
   /* margin: auto;
   padding: 0 24px; */
 }
@@ -327,7 +328,7 @@ main .section.highlight {
 }
 
 /* Responsive - Mobile */
-@media (max-width: 600px) {
+@media (width <= 600px) {
   main {
     overflow-x: hidden;
   }

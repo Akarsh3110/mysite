@@ -2,18 +2,22 @@
 .feature-wrapper {
   margin-top: 180px;
   padding: 60px 0;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 /* Main container */
 .feature.block {
   max-width: 1300px;
+
   /* margin: 0 auto; */
+
   /* margin-bottom: 60px; */
+
   /* border: 1px solid #cfcfcf; */
+
   /* border-radius: 8px; */
   overflow: hidden;
-  padding: 0px 46px;
+  padding: 0 46px;
 
 }
 
@@ -44,7 +48,7 @@
 /* Heading */
 .feature.block h2 {
   font-size: 40px;
-  font-family: 'Asar','serif';
+  font-family: Asar,serif;
   font-weight: 500;
   margin: 20px 0;
   color: #202020;
@@ -86,7 +90,7 @@
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .feature.block > div {
     flex-direction: column;
   }

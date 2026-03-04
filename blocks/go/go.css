@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: row;
     gap: 40px;
+
   /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px 80px; */
@@ -29,7 +30,8 @@
   height: 200px;
   object-fit: cover;
   display: block;
-  margin-right: 16px
+
+  /* margin-right: 16px; */
 }
 
 /* Text container */
@@ -56,7 +58,9 @@
   overflow: hidden;
   text-transform: uppercase;
   text-overflow: ellipsis;
+
   /* limit to 2 lines like screenshot */
+
   /* display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -64,6 +68,7 @@
 }
 
 /* Hover image zoom (optional modern effect) */
+
 /* .go.block > div:hover img {
   transform: scale(1.03);
   transition: 0.4s ease;
@@ -72,12 +77,12 @@
 .default-content-wrapper>#where-do-you-want-to-go{
   color: #202020;
   font-size: 24px;
-  font-family: 'Asar','Georgia','Times New Roman';
+  font-family: Asar,Georgia,serif;
   font-weight:500; 
 }
 
 /* Responsive - Tablet */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   /* .go.block {
     grid-template-columns: 1fr;
     display: grid;
@@ -95,7 +100,7 @@
 }
 
 /* Responsive - Mobile */
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .go.block {
     grid-template-columns: 1fr;
   }

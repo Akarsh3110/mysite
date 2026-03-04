@@ -1,9 +1,10 @@
 .default-content-wrapper{
-    padding: 0px 24px;
+    padding: 0 24px;
 }
+
 .default-content-wrapper>#adventures{
     font-size: 40px;
-    font-family: 'Asar','serif';
+    font-family: Asar,serif;
     font-weight: normal;
     margin-top: 27px;
     margin-bottom: 13.5px;
@@ -15,6 +16,7 @@
     padding: 0;
     margin: 0;
 }
+
 /* Full width wrapper */
 .hero-wrapper {
   width: 100%;
@@ -40,10 +42,12 @@
 .hero.block > div > div:last-child {
   position: relative;
   max-width: 1200px;
+
   /* margin: -120px auto 100px auto;    */
+
   /* Pull panel upward */
-  margin: -120px 30px 60px 30px;
-  background: #ffffff;
+  margin: -120px 30px 60px;
+  background: #fff;
   padding: 30px 50px;
 }
 
@@ -55,10 +59,12 @@
   margin-bottom: 20px;
   color: #222; */
    font-size: 36px;
-    font-family: 'Asar','serif';
+    font-family: Asar,serif;
+
     /* margin: 18px 0px 0px; */
     font-weight: 400;
     color: #202020;
+
     /* padding:0px 32px; */
 }
 
@@ -68,23 +74,24 @@
   line-height: 1.8;
   color: #444; */
   font-size: 18px;
-    font-family: 'Source Sans','serif';
+    font-family: 'Source Sans',serif;
+
     /* margin: 18px 0px 0px; */
     font-weight: 400;
     color: #202020;
+
     /* padding: 0px 32px; */
 
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .hero picture img {
     height: 450px;
   }
 
   .hero.block > div > div:last-child {
-    margin: -60px 20px 60px 20px;
+    margin: -60px 20px 60px;
     padding: 40px;
   }
 
@@ -93,14 +100,15 @@
   }
 
 }
-@media (max-width: 900px) {
+
+@media (width <= 900px) {
   .hero.block > div > div:last-child {
     margin: 0;
     padding: 40px;
   }
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .hero.block > div > div:last-child {
     margin: 0;
     padding: 40px;
