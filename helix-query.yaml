@@ -1,14 +1,11 @@
 version: 1
 indices:
-  simple:
+  raw-index:
     include:
       - /magazine/**
     exclude: []
     target: /query-index.json
     properties:
-      # title:
-      #   select: head > meta[name="og:title"]
-      #   value: attribute(el, 'content')
       title:
         select: head > title
         value: text(el)
