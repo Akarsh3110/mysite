@@ -158,6 +158,16 @@
     margin: -60px 20px 0;
     padding: 28px;
   }
+  .carousel-bottom {
+  position: relative;
+  width: 100%;
+  bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
 
   .carousel-nav {
     right: 20px;
@@ -169,10 +179,29 @@
   .carousel-image img {
     height: 280px;
   }
+  .carousel .block{
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+  }
 
   .carousel-content h2 {
     font-size: 1.6rem;
   }
+  .carousel-bottom {
+  position: relative;
+  bottom: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 }
 
 /* .carousel-slide {
@@ -186,4 +215,5 @@
   opacity: 1;
   position: relative;
 } */
+ 
  

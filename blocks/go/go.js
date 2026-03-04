@@ -1,7 +1,5 @@
 export default function decorate(block) {
-
-  [...block.children].forEach(card => {
-
+  [...block.children].forEach((card) => {
     const title = card.querySelector('strong');
 
     if (title) {
@@ -11,7 +9,5 @@ export default function decorate(block) {
         window.location.href = '/trips';
       });
     }
-
   });
-
 }

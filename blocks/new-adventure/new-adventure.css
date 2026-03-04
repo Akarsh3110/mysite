@@ -113,6 +113,27 @@
 
 /* Responsive - Mobile */
 @media (max-width: 600px) {
+  .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  /* margin: 27px 0 13.5px; */
+  /* margin-top: 90px; */
+  /* margin-bottom: 50px; */
+  /* padding: 0 20px; */
+  /* border-bottom: 2px solid #ffea00; */
+  width: fit-content;
+}
+
+  #next-adventure {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: "Asar", serif;
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
+
   .new-adventure.block > div{
   width: 100%;
   display: flex;
@@ -126,11 +147,16 @@
 
   .new-adventure.block > div > div:last-child {
     width: 100%;
-    margin: -60px 10px 60px 10px;
-    padding: 40px;
+    margin: 0;
+    padding: 0px 14px;
+    text-align: left;
+  }
+  .new-adventure.block > div > div:last-child p:first-of-type{
+    width:90%;
   }
 
   .new-adventure h2 {
     font-size: 30px;
   }
 }
+

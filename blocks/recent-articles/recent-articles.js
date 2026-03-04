@@ -1,7 +1,6 @@
 export default function decorate(block) {
-
   //  Entire cards  are clickable
-  [...block.children].forEach(card => {
+  [...block.children].forEach((card) => {
     const link = card.querySelector('a');
     if (link) {
       card.style.cursor = 'pointer';
@@ -16,7 +15,7 @@ export default function decorate(block) {
   buttonWrapper.className = 'all-articles-wrapper';
 
   const button = document.createElement('a');
-  button.href = '/articles'; 
+  button.href = '/articles';
   button.textContent = 'ALL ARTICLES';
   button.className = 'all-articles-btn';
 

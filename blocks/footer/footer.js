@@ -17,7 +17,7 @@ export default async function decorate(block) {
   const content = fragment.querySelector('.default-content-wrapper');
   const paragraphs = [...content.querySelectorAll('p')];
 
-  // Create Structure 
+  // Create Structure
   const footerTop = document.createElement('div');
   footerTop.classList.add('footer-top');
 
@@ -38,7 +38,7 @@ export default async function decorate(block) {
     paragraphs[1],
     paragraphs[2],
     paragraphs[3],
-    paragraphs[4]
+    paragraphs[4],
   );
 
   // 5 = FOLLOW US
@@ -47,13 +47,13 @@ export default async function decorate(block) {
     paragraphs[5],
     paragraphs[6],
     paragraphs[7],
-    paragraphs[8]
+    paragraphs[8],
   );
 
   // 9-10 = copyright + description
   footerBottom.append(
     paragraphs[9],
-    paragraphs[10]
+    paragraphs[10],
   );
 
   footerTop.append(footerLeft, footerRight);

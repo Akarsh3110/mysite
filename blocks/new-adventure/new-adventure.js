@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   const textContainer = block.querySelector(':scope > div > div:last-child');
 
   if (!textContainer) return;

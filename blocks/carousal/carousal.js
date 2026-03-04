@@ -1,5 +1,6 @@
+/* eslint-disable no-use-before-define */
 export default async function decorate(block) {
-  //  DEBUG: log what the block actually contains 
+  //  DEBUG: log what the block actually contains
   // console.log('=== CAROUSEL BLOCK HTML ===');
   // console.log(block.innerHTML);
   // console.log('Number of direct children (rows):', block.children.length);
@@ -7,7 +8,7 @@ export default async function decorate(block) {
     console.log(`Row ${i}:`, row.outerHTML.substring(0, 200));
   });
 
-  //  Collect ALL pictures anywhere in the block 
+  //  Collect ALL pictures anywhere in the block
   // This handles any authoring structure — single cell, multi-cell, nested divs
   const allPictures = [...block.querySelectorAll('picture')];
   // console.log('Total pictures found:', allPictures.length);
@@ -17,7 +18,7 @@ export default async function decorate(block) {
 
   block.innerHTML = '';
 
-  //  Wrapper 
+  //  Wrapper
   const sliderWrapper = document.createElement('div');
   sliderWrapper.classList.add('carousel-slider');
 
@@ -27,7 +28,7 @@ export default async function decorate(block) {
     return;
   }
 
-  //  Build one slide per picture found 
+  //  Build one slide per picture found
   allPictures.forEach((picture, i) => {
     const slide = document.createElement('div');
     slide.classList.add('carousel-slide');
@@ -94,7 +95,7 @@ export default async function decorate(block) {
   let currentIndex = 0;
   let interval;
 
-  //  Dot indicators 
+  //  Dot indicators
   const dotsWrapper = document.createElement('div');
   dotsWrapper.classList.add('carousel-dots');
 
@@ -111,7 +112,7 @@ export default async function decorate(block) {
     dotsWrapper.append(dot);
   });
 
-  //  Arrow nav 
+  //  Arrow nav
   const navDiv = document.createElement('div');
   navDiv.classList.add('carousel-nav');
 
@@ -135,14 +136,14 @@ export default async function decorate(block) {
 
   navDiv.append(prevBtn, nextBtn);
 
-  //Bottom bar 
+  // Bottom bar
   const bottomBar = document.createElement('div');
   bottomBar.classList.add('carousel-bottom');
   bottomBar.append(dotsWrapper);
   bottomBar.append(navDiv);
   block.append(bottomBar);
 
-  //  Slide logic 
+  //  Slide logic
   function updateDots() {
     dotsWrapper.querySelectorAll('.carousel-dot').forEach((dot, i) => {
       dot.classList.toggle('active', i === currentIndex);
