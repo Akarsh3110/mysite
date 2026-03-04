@@ -4,7 +4,7 @@ indices:
     include:
       - /magazine/**
     exclude: []
-    target: /query-index
+    target: /query-index.json
     properties:
       title:
         select: head > meta[name="og:title"]
