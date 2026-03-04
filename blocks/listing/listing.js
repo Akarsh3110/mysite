@@ -13,7 +13,7 @@ export default async function decorate(block) {
   try {
     const response = await fetch('/data.json');
     console.log(response);
-    
+
     //  const response = await fetch('https://main--mysite--akarsh3110.aem.page/data.json');
 
     if (!response.ok) {
