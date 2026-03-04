@@ -1,10 +1,10 @@
 /* Section wrapper */
-.adventure-list-wrapper {
+.listing-wrapper {
   max-width: 1300px;
   margin: 80px auto;
   padding: 0 40px;
 }
-.adventure-list.block>div:first-child>div>p{
+.listing.block>div:first-child>div>p{
     display: none;
 }
 

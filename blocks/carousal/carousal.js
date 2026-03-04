@@ -23,7 +23,7 @@ export default async function decorate(block) {
   sliderWrapper.classList.add('carousel-slider');
 
   if (allPictures.length === 0) {
-    console.warn('No pictures found in carousel block!');
+    // console.warn('No pictures found in carousel block!');
     block.append(sliderWrapper);
     return;
   }
@@ -88,7 +88,7 @@ export default async function decorate(block) {
   block.append(sliderWrapper);
 
   const slides = block.querySelectorAll('.carousel-slide');
-  console.log('Slides built:', slides.length);
+  // console.log('Slides built:', slides.length);
 
   if (slides.length === 0) return;
 
@@ -155,7 +155,7 @@ export default async function decorate(block) {
     currentIndex = (index + slides.length) % slides.length;
     slides[currentIndex].classList.add('active');
     updateDots();
-    console.log('Showing slide:', currentIndex);
+    // console.log('Showing slide:', currentIndex);
   }
 
   function nextSlide() { showSlide(currentIndex + 1); }
@@ -164,11 +164,11 @@ export default async function decorate(block) {
   function stopAutoSlide() { clearInterval(interval); }
 
   nextBtn.addEventListener('click', () => {
-    console.log('Next clicked');
+    // console.log('Next clicked');
     stopAutoSlide(); nextSlide(); startAutoSlide();
   });
   prevBtn.addEventListener('click', () => {
-    console.log('Prev clicked');
+    // console.log('Prev clicked');
     stopAutoSlide(); prevSlide(); startAutoSlide();
   });
 

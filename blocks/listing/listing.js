@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import renderCards from '../../helper/helper.js';
 
 export default async function decorate(block) {
@@ -12,7 +13,7 @@ export default async function decorate(block) {
 
   try {
     const response = await fetch('/data.json');
-    console.log(response);
+    // console.log(response);
 
     //  const response = await fetch('https://main--mysite--akarsh3110.aem.page/data.json');
 
@@ -46,9 +47,9 @@ export default async function decorate(block) {
   //
 
   // grid container
-  const grid = document.createElement('div');
-  grid.className = 'adventure-grid';
-  block.appendChild(grid);
+  // const grid = document.createElement('div');
+  // grid.className = 'adventure-grid';
+  // block.appendChild(grid);
 
   // filters container
   const filtersContainer = document.createElement('div');
@@ -76,9 +77,9 @@ export default async function decorate(block) {
   block.appendChild(filtersContainer);
 
   // grid container
-  // const grid = document.createElement('div');
-  // grid.className = 'adventure-grid';
-  // block.appendChild(grid);
+  const grid = document.createElement('div');
+  grid.className = 'adventure-grid';
+  block.appendChild(grid);
 
   // function renderCards(category) {
   //   grid.innerHTML = '';
