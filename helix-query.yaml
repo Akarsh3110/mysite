@@ -1,0 +1,23 @@
+version: 1
+indices:
+  simple:
+    include:
+      - /magazine/**
+    exclude: []
+    target: /query-index
+    properties:
+      title:
+        select: head > meta[name="og:title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, 'content')
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, 'content')
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, 'content')
