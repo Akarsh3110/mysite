@@ -28,7 +28,7 @@ indices:
       - '/magazine/**'
     exclude:
       - '/magazine'
-    target: /raw_index.json
+    target: /query-index.json
     properties:
       title:
         select: head > meta[property="og:title"]
