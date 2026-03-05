@@ -1,14 +1,38 @@
-version: 1
+# version: 1
+# indices:
+#   raw_index:
+#     include:
+#       - /magazine/**
+#     exclude: []
+#     target: /query-index.json
+#     properties:
+#       title:
+#         select: head > title
+#         value: text(el)
+#       description:
+#         select: head > meta[name="description"]
+#         value: attribute(el, 'content')
+#       image:
+#         select: head > meta[property="og:image"]
+#         value: attribute(el, 'content')
+#       category:
+#         select: head > meta[name="category"]
+#         value: attribute(el, 'content')
+#       template:
+#         select: head > meta[name="template"]
+#         value: attribute(el, 'content')
+
 indices:
-  raw_index:
+  pages:
     include:
-      - /magazine/**
-    exclude: []
-    target: /query-index.json
+      - '/magazine/**'
+    exclude:
+      - '/magazine'
+    target: /raw_index.json
     properties:
       title:
-        select: head > title
-        value: text(el)
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
       description:
         select: head > meta[name="description"]
         value: attribute(el, 'content')
@@ -21,3 +45,6 @@ indices:
       template:
         select: head > meta[name="template"]
         value: attribute(el, 'content')
+      lastModified:
+        select: headers["last-modified"]
+        value: date(el)
