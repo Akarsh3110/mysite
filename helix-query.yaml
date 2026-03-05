@@ -25,7 +25,7 @@ version: 1
 indices:
   magazine: &magazine
     include:
-      - '/magazine/**'
+      - '/**'
     target: /query-index.json
     properties:
       title:
