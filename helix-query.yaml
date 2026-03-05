@@ -1,4 +1,24 @@
 version: 1
+indices:
+  pages:
+    include:
+      - '/magazine/**'
+    exclude:
+      - '/magazine'
+    target: /product-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, 'content')
+      lastModified:
+        select: headers["last-modified"]
+        value: date(el)
 # indices:
 #   raw_index:
 #     include:
@@ -22,12 +42,12 @@ version: 1
 #         select: head > meta[name="template"]
 #         value: attribute(el, 'content')
 
-indices:
-  magazine: &magazine
-    include:
-      - '/magazine/**'
-    target: /magazine-index.json
-    properties:
-      title:
-        select: head > meta[property="og:title"]
-        value: attribute(el, 'content')
+# indices:
+#   magazine: &magazine
+#     include:
+#       - '/magazine/**'
+#     target: /magazine-index.json
+#     properties:
+#       title:
+#         select: head > meta[property="og:title"]
+#         value: attribute(el, 'content')
