@@ -1,6 +1,6 @@
 version: 1
 indices:
-  raw-index:
+  raw_index:
     include:
       - /magazine/**
     exclude: []
