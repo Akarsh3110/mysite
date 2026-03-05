@@ -1,4 +1,4 @@
-# version: 1
+version: 1
 # indices:
 #   raw_index:
 #     include:
@@ -23,7 +23,7 @@
 #         value: attribute(el, 'content')
 
 indices:
-  pages:
+  magazine: &magazine
     include:
       - '/magazine/**'
     exclude:

@@ -79,6 +79,15 @@ body {
   font-size: var(--body-font-size-m);
   line-height: 1.6;
 }
+.default-content-wrapper h2{
+  font-size: 36px;
+  font-weight: 500;
+  font-family: Asar, serif;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  padding-left: 40px;
+}
 
 body.appear {
   display: block;
