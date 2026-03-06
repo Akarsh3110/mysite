@@ -28,6 +28,43 @@
   /* border-bottom: 2px solid #ffea00; */
 }
 
+#members-only{
+  font-size: 36px;
+  font-weight: 500;
+  font-family: Asar, serif;
+  margin: 0;
+  position: relative;
+}
+
+#members-only::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #ffea00;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+
+#all-articles{
+  font-size: 42px;
+  font-weight: 500;
+  font-family: Asar, serif;
+  margin: 0;
+  position: relative;
+}
+
+#all-articles::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #ffea00;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
 /* Heading style */
 #recent-article {
   font-size: 42px;

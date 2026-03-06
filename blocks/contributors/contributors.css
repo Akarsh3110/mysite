@@ -1,0 +1,157 @@
+/* section spacing */
+.default-content-wrapper>p>em{
+    font-size: 14px;
+    color: #202020;
+    padding: 40px;
+}
+
+/* Heading style */
+#contributors {
+  font-size: 42px;
+  font-weight: 500;
+  font-family: Asar, serif;
+
+  /* margin: 0; */
+  position: relative;
+  padding-left: 40px;
+    margin-top:30px;
+}
+
+#wknd-guides{
+    font-size: 42px;
+  font-weight: 500;
+  font-family: Asar, serif;
+
+  /* margin: 0; */
+  position: relative;
+  padding-left: 40px;
+    margin-top:100px;
+}
+
+/* Yellow underline */
+#contributors::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #ffea00;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+#wknd-guides::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #ffea00;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+
+
+/* .contributors {
+  
+} */
+
+/* contributors grid */
+
+.contributors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* card layout */
+
+.contributors > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* circular images */
+
+.contributors picture img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* contributor name */
+
+.contributors h3,
+.contributors p:first-child {
+  font-family: Asar, serif;
+  font-size: 26px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* role text */
+
+.contributors h5 {
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+/* social bar */
+
+.contributors > div > div:last-child {
+    width: 100px;
+    height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  background: #222;
+
+  /* padding: 14px 40px; */
+  padding: 0 20px;
+
+  /* margin-top: 10px; */
+}
+
+/* icons */
+
+.contributors .icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+/* hover effect */
+
+/* .contributors > div {
+  transition: transform 0.3s ease;
+} */
+
+/* .contributors > div:hover {
+  transform: translateY(-6px);
+} */
+
+/* responsive */
+
+@media (width <= 1000px) {
+  .contributors {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+@media (width <= 600px) {
+  .contributors {
+    grid-template-columns: 1fr;
+  }
+}
