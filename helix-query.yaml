@@ -3,9 +3,8 @@ version: 1
 indices:
   pages:
     include:
-      - '/magazine/**'
-    exclude:
-      - '/magazine'
+      - '/**'
+    exclude: []
     target: /product.json
     properties:
       path:
@@ -19,6 +18,3 @@ indices:
       image:
         select: head > meta[property="og:image"]
         value: attribute(el, 'content')
-      lastModified:
-        select: headers["last-modified"]
-        value: date(el)
