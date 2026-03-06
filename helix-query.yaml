@@ -8,6 +8,8 @@ indices:
       - '/magazine'
     target: /product.json
     properties:
+      path:
+        value: path
       title:
         select: head > meta[property="og:title"]
         value: attribute(el, 'content')
