@@ -26,10 +26,12 @@ export default async function decorate(block) {
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `
     <button type="button" aria-label="Toggle navigation">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <path d="M3 6h18M3 12h18M3 18h18"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      
+      <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 18H10" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path d="M4 12L16 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+</svg>
     </button>
   `;
 
@@ -112,15 +114,7 @@ export default async function decorate(block) {
     </svg> */
   searchWrapper.innerHTML = `
   <span class="search-icon">
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="18px" height="18px" viewBox="0 0 1152 1152" enable-background="new 0 0 1152 1152" xml:space="preserve">
-<path d="M672,0C406.903,0,192,214.903,192,480c0,95.7,28.011,184.855,76.275,259.725C181.646,826.354,48.075,959.925,36,972
-  c-18,18-36,36-36,72s18,54,36,72s36.012,36,72,36s54-18,72-36c12.075-12.075,145.646-145.646,232.275-232.275
-  C487.144,931.988,576.3,960,672,960c265.097,0,480-214.903,480-480C1152,214.903,937.097,0,672,0z M672,816
-  c-185.568,0-336-150.433-336-336c0-185.568,150.432-336,336-336c185.567,0,336,150.432,336,336C1008,665.567,857.567,816,672,816z"
-  />
-</svg>
-
+    <img src="/icons/search.svg" alt="Search" />
   </span>
   <input type="text" placeholder="SEARCH" />
 `;
@@ -130,6 +124,62 @@ export default async function decorate(block) {
   navSection.appendChild(searchWrapper);
 
   block.append(nav);
+
+  // ==========================
+  // SEARCH FUNCTIONALITY
+  // ==========================
+  const searchInput = searchWrapper.querySelector('input');
+
+  // Map of valid routes
+  const routes = {
+    adventures: '/adventures',
+    magazine: '/magazine',
+    faq: '/faqs',
+    faqs: '/faqs',
+    'about us': '/about-us',
+  };
+
+  // Toast function
+  function showToast(message) {
+    let toast = document.querySelector('.search-toast');
+
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'search-toast';
+      document.body.appendChild(toast);
+    }
+
+    toast.textContent = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2500);
+  }
+
+  // Handle search
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const value = searchInput.value.trim().toLowerCase();
+
+      if (!value) return;
+
+      // Exact match
+      if (routes[value]) {
+        window.location.href = routes[value];
+        return;
+      }
+
+      // Partial match
+      const match = Object.keys(routes).find((key) => value.includes(key));
+
+      if (match) {
+        window.location.href = routes[match];
+      } else {
+        showToast('Page not found');
+      }
+    }
+  });
 
   // SHRINK HEADER ON SCROLL
 

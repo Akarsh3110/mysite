@@ -1,17 +1,7 @@
 /* eslint-disable no-use-before-define */
 export default async function decorate(block) {
-  //  DEBUG: log what the block actually contains
-  // console.log('=== CAROUSEL BLOCK HTML ===');
-  // console.log(block.innerHTML);
-  // console.log('Number of direct children (rows):', block.children.length);
-  [...block.children].forEach((row, i) => {
-    console.log(`Row ${i}:`, row.outerHTML.substring(0, 200));
-  });
-
-  //  Collect ALL pictures anywhere in the block
   // This handles any authoring structure — single cell, multi-cell, nested divs
   const allPictures = [...block.querySelectorAll('picture')];
-  // console.log('Total pictures found:', allPictures.length);
 
   // Also collect any text data from rows (for title/desc/button)
   const rows = [...block.children];
@@ -23,7 +13,6 @@ export default async function decorate(block) {
   sliderWrapper.classList.add('carousel-slider');
 
   if (allPictures.length === 0) {
-    // console.warn('No pictures found in carousel block!');
     block.append(sliderWrapper);
     return;
   }
@@ -88,7 +77,6 @@ export default async function decorate(block) {
   block.append(sliderWrapper);
 
   const slides = block.querySelectorAll('.carousel-slide');
-  // console.log('Slides built:', slides.length);
 
   if (slides.length === 0) return;
 
@@ -155,7 +143,6 @@ export default async function decorate(block) {
     currentIndex = (index + slides.length) % slides.length;
     slides[currentIndex].classList.add('active');
     updateDots();
-    // console.log('Showing slide:', currentIndex);
   }
 
   function nextSlide() { showSlide(currentIndex + 1); }
@@ -164,11 +151,9 @@ export default async function decorate(block) {
   function stopAutoSlide() { clearInterval(interval); }
 
   nextBtn.addEventListener('click', () => {
-    // console.log('Next clicked');
     stopAutoSlide(); nextSlide(); startAutoSlide();
   });
   prevBtn.addEventListener('click', () => {
-    // console.log('Prev clicked');
     stopAutoSlide(); prevSlide(); startAutoSlide();
   });
 

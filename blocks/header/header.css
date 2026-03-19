@@ -1,179 +1,119 @@
-/* 
-   HEADER WRAPPER
- */
+/* ========================= */
 
-html{
-  overflow-x: hidden;
-}
+/* BASE (MOBILE FIRST) */
+
+/* ========================= */
 
 .header-wrapper {
-  /* height: 92px; */
-  height: 168px;
-  background-color: #fff;
+  height: 80px;
+  background: #fff;
   position: sticky;
-  padding: 8px 0;
-  display: flex;
-
-  /* justify-content: center; */
-  align-items: center;
   top: 0;
   z-index: 1000;
-
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-  transition: height 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  transition: all 0.3s ease;
 }
 
-/* When scrolled */
 .header-wrapper.scrolled {
-  height: 89px;
-
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); */
-   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  height: 70px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
 }
 
 .header.block {
   width: 100%;
-  padding: 0 80px;
-
-  /* background-color: bisque */
 }
 
-/* 
-   NAV ROOT
- */
+/* ========================= */
+
+/* NAV */
+
+/* ========================= */
 nav#nav {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  /* height: 80px; */
-  height: 100%;
   position: relative;
-
-  /* background-color: aqua; */
 }
 
+/* ========================= */
 
-/* 
-   HAMBURGER
- */
+/* LOGO */
+
+/* ========================= */
+.nav-logo svg {
+  width: 90px;
+  height: auto;
+}
+
+/* ========================= */
+
+/* HAMBURGER */
+
+/* ========================= */
 .nav-hamburger {
-  /* Hidden on desktop */
-  display: none;
+  display: flex;
 }
 
 .nav-hamburger button {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
 }
 
-/* .nav-brand,
-.nav-logo {
-  font-size: 48px;
-  font-weight: 900;
-  letter-spacing: 4px;
-  font-family: "Source Sans 3", sans-serif;;
-  color: #000 !important;
-  background-color: tomato;
-  text-decoration: none !important;
-  flex-shrink: 0;
-} */
+/* ========================= */
 
- /* SVG Logo */
-.nav-logo svg {
-  width: 120px;
-  height: 47px;
-  display: block;
-  filter: invert(0);
+/* NAV MENU (MOBILE DROPDOWN) */
 
-  /* transition: width 0.3s ease; */
-}
-
-/* 
-   NAV SECTION (contains the links)
- */
-
+/* ========================= */
 nav#nav .section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex: 1;
-  justify-content: flex-end;
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  flex-direction: column;
+  padding: 16px;
+  border-top: 1px solid #ddd;
 }
 
-/* 
-   DEFAULT CONTENT WRAPPER — holds the <p> nav items
- */
+nav#nav[aria-expanded="true"] .section {
+  display: flex;
+}
 
+/* NAV LINKS */
 nav#nav .default-content-wrapper {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* Each <p> tag is a nav item */
-nav#nav .default-content-wrapper p {
-  margin: 0;
-  padding: 0;
-  outline:0;
-  box-sizing: border-box;
-}
-
-nav#nav .default-content-wrapper a.active {
-  background-color: yellow !important;
-  color: #000 !important;
-}
-
-/* Style <p> as nav link */
-nav#nav .default-content-wrapper  a,
-nav#nav .default-content-wrapper a.active {
-  text-decoration: none !important;
-  color: #202020 !important;
+nav#nav .default-content-wrapper a {
+  text-decoration: none;
+  color: #202020;
   font-size: 14px;
-  font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
-
-  /* font-weight: 700; */
-
-  /* letter-spacing: 1.5px; */
   text-transform: uppercase;
-  position: relative;
-  cursor: pointer;
-  white-space: nowrap;
-  padding: 15px 17px;
+  padding: 10px;
 }
 
-nav#nav .default-content-wrapper  a:hover,
-nav#nav .default-content-wrapper p:hover {
-  background-color: #ffea00 !important;
-
+nav#nav .default-content-wrapper a:hover {
+  background: #ffea00;
 }
 
-/*
-   SEARCH BOX
-*/
+/* ========================= */
+
+/* SEARCH */
+
+/* ========================= */
 .nav-search {
   display: flex;
   align-items: center;
-  background: #ebebeb8a;
-
-  /* padding: 8px 14px; */
-  padding: 0 1px;
-  margin-left: 30px;
-  gap: 10px;
-
-  /* min-width: 166px; */
-  width: 166px;
-
-  /* width: calc(100% - 4rem); */
-  height: 42px;
+  background: #f2f2f2;
+  padding: 6px 10px;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .nav-search input {
@@ -181,108 +121,55 @@ nav#nav .default-content-wrapper p:hover {
   background: transparent;
   outline: none;
   font-size: 12px;
-  font-family: "Source Sans 3", sans-serif;
   width: 100%;
 }
 
-.nav-search input::placeholder {
-  color: #666;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
+/* ========================= */
 
-.search-icon {
-  display: flex;
-  align-items: center;
-  color: #000;
-  padding:0 5px;
-}
+/* TABLET */
 
-/* Hover underline animation */
-
-/* nav#nav .default-content-wrapper p::after,
-nav#nav .default-content-wrapper p a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #000;
-  left: 0;
-  bottom: -6px;
-  transition: width 0.3s ease;
-} */
-
-/* nav#nav .default-content-wrapper p:hover::after,
-nav#nav .default-content-wrapper p a:hover::after {
-  background-color: yellow;
-}  */
-
-
-/* nav#nav .default-content-wrapper p:hover::after,
-nav#nav .default-content-wrapper p a:hover::after {
-  width: 100%;
-} */
-
-/* 
-   RESPONSIVE
- */
-
-@media (width <= 1024px) {
-  .header.block {
-    padding: 0 40px;
+/* ========================= */
+@media (width >= 768px) {
+  .header-wrapper {
+    height: 100px;
   }
 
-  nav#nav .default-content-wrapper {
-    gap: 24px;
+  .nav-logo svg {
+    width: 110px;
   }
 }
 
-@media (width <= 600px) {
-  .header-wrapper{
-    width: 100dvw;
-    height: 92px;
-    position: sticky;
-  }
+/* ========================= */
 
-  .header.block {
-    padding: 10px;
+/* DESKTOP */
+
+/* ========================= */
+@media (width >= 1024px) {
+  .header-wrapper {
+    height: 120px;
+    padding: 0 76px;
   }
 
   .nav-hamburger {
-    display: flex;
-    order: -1; /* hamburger on the left */
+    display: none;
   }
 
   nav#nav .section {
-    /* width: 100%; */
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 1px solid #e0e0e0;
-    z-index: 999;
-
-    /* display: flex;
-    flex-direction: column; */
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    padding: 0;
   }
 
   nav#nav .default-content-wrapper {
-    /* width: 100%; */
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: row;
+    gap: 32px;
   }
 
   .nav-search {
-  width: 100%;
-  margin-left: 0;
-}
-
-  /* When nav is expanded (aria-expanded="true") */
-  nav#nav[aria-expanded="true"] .section {
-    display: flex;
+    margin-left: 20px;
+    width: 180px;
   }
 }
-

@@ -3,10 +3,10 @@
 /* WRAPPER */
 
 /* ========================= */
-.recent-articles-wrapper {
+.listing-wrapper {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 76px;
+  margin: 40px auto;
+  padding: 0 16px;
 }
 
 /* ========================= */
@@ -14,15 +14,19 @@
 /* HEADING */
 
 /* ========================= */
-#recent-article {
+.adventure-heading {
+  margin: 20px 0;
+}
+
+.adventure-heading h2 {
   font-size: 28px;
   font-family: Asar, serif;
   font-weight: 500;
-  margin: 20px 0;
+  margin: 0;
   position: relative;
 }
 
-#recent-article::after {
+.adventure-heading::after {
   content: "";
   display: block;
   width: 60px;
@@ -33,13 +37,43 @@
 
 /* ========================= */
 
+/* FILTERS (MOBILE FIRST) */
+
+/* ========================= */
+.adventure-filters {
+  display: flex;
+  flex-wrap: wrap; /*  important for mobile */
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.adventure-filter {
+  padding: 8px 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+}
+
+.listing .button-wrapper {
+  display: none;
+}
+
+.adventure-filter.active {
+  background: #202020;
+  color: #fff;
+  border-color: #202020;
+}
+
+/* ========================= */
+
 /* GRID (MOBILE FIRST) */
 
 /* ========================= */
-.recent-articles.block {
+.adventure-grid {
   display: grid;
   grid-template-columns: 1fr; /*  mobile */
-  gap: 20px;
+  gap: 24px;
 }
 
 /* ========================= */
@@ -47,40 +81,36 @@
 /* CARD */
 
 /* ========================= */
-.recent-articles.block > div {
+.adventure-card {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
 }
 
+/* REMOVE FIXED WIDTH  */
+
 /* IMAGE */
-.recent-articles.block picture img {
+.adventure-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  display: block;
-}
-
-/* TEXT */
-.recent-articles.block > div > div:last-child {
-  margin-top: 12px;
 }
 
 /* TITLE */
-.recent-articles.block h2 {
+.adventure-card h3 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin: 12px 0 6px;
   color: #202020;
 }
 
 /* DESCRIPTION */
-.recent-articles.block p {
+.adventure-card p {
   font-size: 13px;
   color: #666;
-  margin-top: 6px;
   line-height: 1.5;
+
+  /*  better truncation */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -89,45 +119,21 @@
 
 /* ========================= */
 
-/* BUTTON */
-
-/* ========================= */
-.all-articles-wrapper {
-  margin-top: 30px;
-}
-
-.all-articles-wrapper > a{
-  text-decoration: none;
-  color: #202020;
-}
-
-.all-articles-btn {
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 24px;
-  background: #ffea00;
-  color: #000;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-/* ========================= */
-
 /* TABLET */
 
 /* ========================= */
 @media (width >= 768px) {
-  .recent-articles.block {
+  .adventure-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 30px;
   }
 
-  #recent-article {
+  .adventure-heading h2 {
     font-size: 32px;
+  }
+
+  .adventure-filter {
+    font-size: 13px;
   }
 }
 
@@ -137,16 +143,20 @@
 
 /* ========================= */
 @media (width >= 1024px) {
-  .recent-articles.block {
-    grid-template-columns: repeat(4, 1fr); /* matches WKND */
-    gap: 30px;
+  .listing-wrapper {
+    padding: 0 76px;
   }
 
-  #recent-article {
-    font-size: 36px;
+  .adventure-grid {
+    grid-template-columns: repeat(4, 1fr); /*  WKND layout */
+    gap: 40px;
   }
 
-  .recent-articles.block picture img {
+  .adventure-card img {
     height: 180px;
+  }
+
+  .adventure-heading h2 {
+    font-size: 36px;
   }
 }

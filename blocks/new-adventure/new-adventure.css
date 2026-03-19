@@ -1,174 +1,147 @@
-.default-content-wrapper {
-  max-width: 1300px;
-  margin: 27px 0 13.5px;
+/* ========================= */
 
-  /* margin-top: 90px; */
+/* WRAPPER */
 
-  /* margin-bottom: 50px; */
-
-  /* padding: 0 20px; */
-
-  /* border-bottom: 2px solid #ffea00; */
-  width: fit-content;
+/* ========================= */
+.new-adventure-wrapper {
+  width: 100%;
+  padding: 0;
 }
 
-/* Heading style */
+/* ========================= */
+
+/* HEADING */
+
+/* ========================= */
 #next-adventure {
-  font-size: 42px;
-  font-weight: 500;
+  font-size: 32px;
   font-family: Asar, serif;
-  margin: 0;
+  font-weight: 500;
+  margin: 20px 0;
+  margin-bottom: 60px;
   position: relative;
 }
 
-/* Yellow underline */
 #next-adventure::after {
   content: "";
   display: block;
-  width: 70px;
+  width: 60px;
   height: 2px;
-  background-color: #ffea00;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  background: #ffea00;
+  margin-top: 10px;
+  padding-left: 76px;
 }
 
-/* Wrapper full width */
-.new-adventure-wrapper {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
+/* ========================= */
+
+/* BLOCK LAYOUT (MOBILE FIRST) */
+
+/* ========================= */
+.new-adventure.block > div {
+  display: flex;
+  flex-direction: column; /*  mobile stack */
 }
 
-/*  Image full width */
-.new-adventure.block > div > div:first-child {
-  width: 100%;
-  background-color: #444;
-}
+/* ========================= */
 
+/* IMAGE */
+
+/* ========================= */
 .new-adventure picture img {
   width: 100%;
-  height: 550px; 
+  height: 260px;
   object-fit: cover;
   display: block;
 }
 
-/* Overlapping content box */
+/* ========================= */
+
+/* CONTENT */
+
+/* ========================= */
 .new-adventure.block > div > div:last-child {
-    width: 95%;
-  position: relative;
-
-  /* max-width: 1200px; */
-  margin: -120px auto 80px;
   background: #fff;
-  padding: 14px;
-
-  /* box-shadow: 0 20px 40px rgba(0,0,0,0.1); */
+  padding: 20px 16px;
 }
 
-/* Heading */
+/* TITLE */
 .new-adventure h2 {
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 28px;
   font-family: Asar, serif;
-  margin-bottom: 20px;
-
+  font-weight: 400;
+  margin-bottom: 16px;
 }
 
-/* Description */
+/* DESCRIPTION */
 .new-adventure.block > div > div:last-child p:first-of-type {
-  font-size: 18px;
-  font-family: 'Source Sans 3',sans-serif;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.6;
   color: #444;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-/* Button */
+/* BUTTON */
 .new-adventure-btn {
   display: inline-block;
-  font-size: 14px;
-  padding: 14px 35px;
-  background-color: #ffea00;
-  color: #202020 !important;
+  font-size: 13px;
+  padding: 12px 24px;
+  background: #ffea00;
+  color: #000 !important;
   text-decoration: none !important;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  transition: 0.3s ease;
 }
 
-.new-adventure-btn:hover {
-  background-color: #e6c200;
-}
+/* ========================= */
 
-/* Responsive */
-@media (width <= 992px) {
+/* TABLET */
+
+/* ========================= */
+@media (width >= 768px) {
   .new-adventure picture img {
     height: 400px;
   }
 
   .new-adventure.block > div > div:last-child {
-    margin: -60px 20px 60px;
+    padding: 30px;
+  }
+
+  .new-adventure h2 {
+    font-size: 32px;
+  }
+}
+
+/* ========================= */
+
+/* DESKTOP (WKND STYLE) */
+
+/* ========================= */
+@media (width >= 1024px) {
+  .new-adventure-wrapper {
+    padding: 0;
+  }
+
+  .new-adventure.block {
+    position: relative;
+  }
+
+  /* Image full width */
+  .new-adventure picture img {
+    height: 520px;
+  }
+
+  /* Overlay card */
+  .new-adventure.block > div > div:last-child {
+    position: absolute;
+    bottom: -90px;
+    left: 20px;
+    right: 20px;
+    width: 90%;
     padding: 40px;
+    background: #fff;
   }
 
   .new-adventure h2 {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
-
-/* Responsive - Mobile */
-@media (width <= 600px) {
-  .default-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-
-  /* margin: 27px 0 13.5px; */
-
-  /* margin-top: 90px; */
-
-  /* margin-bottom: 50px; */
-
-  /* padding: 0 20px; */
-
-  /* border-bottom: 2px solid #ffea00; */
-  width: fit-content;
-}
-
-  #next-adventure {
-  font-size: 36px;
-  font-weight: 500;
-  font-family: Asar, serif;
-  margin: 0;
-  text-align: left;
-  position: relative;
-}
-
-  .new-adventure.block > div{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-  .new-adventure picture img {
-    width: 100%;
-    height: 400px;
-  }
-
-  .new-adventure.block > div > div:last-child {
-    width: 100%;
-    margin: 0;
-    padding: 0 14px;
-    text-align: left;
-  }
-
-  .new-adventure.block > div > div:last-child p:first-of-type{
-    width:90%;
-  }
-
-  .new-adventure h2 {
-    font-size: 30px;
-  }
-}
-

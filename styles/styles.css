@@ -320,8 +320,23 @@ main > .section:first-of-type {
   margin: 0;
   text-align: left;
   position: relative;
-  padding-left: 40px;
+  padding-left: 76px;
 }
+
+.default-content-wrapper>h3{
+  font-size: 36px;
+  font-weight: 500;
+  font-family: Asar, serif;
+  margin: 10px 0;
+  text-align: left;
+  position: relative;
+  padding-left: 76px;
+}
+
+.default-content-wrapper>p{
+  padding: 10px 76px;
+}
+
 
 
 @media (width : 900px) {

@@ -1,157 +1,133 @@
-/* section spacing */
-.default-content-wrapper>p>em{
-    font-size: 14px;
-    color: #202020;
-    padding: 40px;
-}
+/* =========================
+   MOBILE FIRST
+========================= */
 
-/* Heading style */
-#contributors {
-  font-size: 42px;
+/* SECTION HEADINGS */
+
+#contributors,
+#wknd-guides {
+  font-size: 32px;
   font-weight: 500;
   font-family: Asar, serif;
-
-  /* margin: 0; */
-  position: relative;
-  padding-left: 40px;
-    margin-top:30px;
+  padding: 0 70px;
+  margin-top: 30px;
 }
 
-#wknd-guides{
-    font-size: 42px;
-  font-weight: 500;
-  font-family: Asar, serif;
-
-  /* margin: 0; */
-  position: relative;
-  padding-left: 40px;
-    margin-top:100px;
-}
-
-/* Yellow underline */
-#contributors::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 2px;
-  background-color: #ffea00;
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
+#contributors::after,
 #wknd-guides::after {
   content: "";
   display: block;
-  width: 70px;
+  width: 60px;
   height: 2px;
   background-color: #ffea00;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin-top: 12px;
+  margin-bottom: 25px;
 }
 
-
-
-/* .contributors {
-  
-} */
-
-/* contributors grid */
+/* GRID */
 
 .contributors {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 70px;
+  grid-template-columns: 1fr; /*  mobile first */
+  gap: 40px;
+  padding: 0 20px;
   text-align: center;
-  margin-top: 60px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
-/* card layout */
+/* CARD */
 
-.contributors > div {
+.contributor-card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* circular images */
+/* IMAGE */
 
 .contributors picture img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* contributor name */
+/* NAME */
 
 .contributors h3,
 .contributors p:first-child {
   font-family: Asar, serif;
-  font-size: 26px;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 8px;
   color: #222;
 }
 
-/* role text */
+/* ROLE */
 
 .contributors h5 {
-  font-size: 13px;
-  letter-spacing: 1.2px;
+  font-size: 12px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
-/* social bar */
+/* SOCIAL BAR */
 
 .contributors > div > div:last-child {
-    width: 100px;
-    height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 28px;
+  gap: 18px;
+  height: 48px;
+  cursor: pointer;
   background: #222;
-
-  /* padding: 14px 40px; */
-  padding: 0 20px;
-
-  /* margin-top: 10px; */
+  padding: 6px 10px;
 }
 
-/* icons */
+/* ICON */
 
 .contributors .icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   filter: invert(1);
 }
 
-/* hover effect */
+/* =========================
+   TABLET (≥768px)
+========================= */
 
-/* .contributors > div {
-  transition: transform 0.3s ease;
-} */
-
-/* .contributors > div:hover {
-  transform: translateY(-6px);
-} */
-
-/* responsive */
-
-@media (width <= 1000px) {
+@media (width >= 768px) {
   .contributors {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
+
+  .contributors picture img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-@media (width <= 600px) {
+/* =========================
+   DESKTOP (≥1024px)
+========================= */
+
+@media (width >= 1024px) {
   .contributors {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 40px;
+  }
+
+  .contributors picture img {
+    width: 160px;
+    height: 160px;
+  }
+
+  #contributors,
+  #wknd-guides {
+    font-size: 42px;
+    padding-left: 76px;
   }
 }

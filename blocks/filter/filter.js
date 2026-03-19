@@ -2,36 +2,39 @@
 import renderCards from '../../helper/helper.js';
 
 export default async function decorate(block) {
-  // const response = await fetch('/data.json');
-  // const response = await fetch('https://main--mysite--akarsh3110.aem.page/data.json');
+  //  GET ERROR MESSAGE FROM BLOCK
+  const errorRow = block.children[1];
+  const errorMessage = errorRow
+    ? errorRow.textContent.trim()
+    : 'Failed to load adventures.';
 
-  // const data = await response.json();
+  //  REMOVE CONFIG ROWS
+  if (block.children[0]) block.children[0].remove();
+  if (block.children[0]) block.children[0].remove();
 
-  // const items = data.data || data;
-  // console.log(items,"ok")
   let items = [];
 
   try {
-    const response = await fetch('/data.json');
-    // console.log(response);
+  //  GET DATA URL FROM LINK
+    const link = block.querySelector('.button-wrapper a');
+    const dataUrl = link ? link.href : '/data.json';
 
-    //  const response = await fetch('https://main--mysite--akarsh3110.aem.page/data.json');
+    const response = await fetch(dataUrl);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     const data = await response.json();
-    items = data.data || data;
-    // console.log(items);
+    items = data.data;
   } catch (error) {
-    console.error('Failed to load adventure data:', error);
+  // console.error('Failed to load adventure data:', error);
 
     block.innerHTML = `
-      <div class="error-message">
-        Failed to load adventures. Please try again later.
-      </div>
-    `;
+    <div class="error-message">
+      ${errorMessage}
+    </div>
+  `;
     return;
   }
 
@@ -45,11 +48,6 @@ export default async function decorate(block) {
   headingWrapper.appendChild(heading);
   block.appendChild(headingWrapper);
   //
-
-  // grid container
-  // const grid = document.createElement('div');
-  // grid.className = 'adventure-grid';
-  // block.appendChild(grid);
 
   // filters container
   const filtersContainer = document.createElement('div');
@@ -81,27 +79,5 @@ export default async function decorate(block) {
   grid.className = 'adventure-grid';
   block.appendChild(grid);
 
-  // function renderCards(category) {
-  //   grid.innerHTML = '';
-
-  //   const filtered = category === 'All'
-  //     ? items
-  //     : items.filter(item => item.category === category);
-
-  //   filtered.forEach(item => {
-  //     const card = document.createElement('div');
-  //     card.className = 'adventure-card';
-
-  //     card.innerHTML = `
-  //       <img src="${item.image}" alt="">
-  //       <h3>${item.head}</h3>
-  //       <p>${item.des}</p>
-  //     `;
-
-  //     grid.appendChild(card);
-  //   });
-  // }
-
-  // renderCards('All');
   renderCards(grid, items, 'All');
 }
