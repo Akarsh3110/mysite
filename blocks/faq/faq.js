@@ -11,9 +11,7 @@ export default function decorate(block) {
   const right = document.createElement('div');
   right.className = 'faq-help';
 
-  // =========================
-  // ✅ TOP SECTION (IMAGE + TEXT)
-  // =========================
+  //  TOP SECTION (IMAGE + TEXT)
 
   const firstRow = rows[0];
   if (firstRow) {
@@ -21,9 +19,7 @@ export default function decorate(block) {
     left.appendChild(firstRow);
   }
 
-  // =========================
-  // ✅ FAQ ITEMS
-  // =========================
+  //  FAQ ITEMS
 
   rows.slice(1).forEach((row) => {
     const cols = [...row.children];
@@ -56,9 +52,7 @@ export default function decorate(block) {
     left.appendChild(item);
   });
 
-  // =========================
-  // ✅ RIGHT SIDE HELP
-  // =========================
+  //  RIGHT SIDE HELP
 
   right.innerHTML = `
     <h3>Need more help?</h3>

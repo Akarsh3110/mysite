@@ -1,19 +1,17 @@
-/* ========================= */
+
 
 /* WRAPPER */
 
-/* ========================= */
 .filter-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 16px;
 }
 
-/* ========================= */
+
 
 /* HEADING */
 
-/* ========================= */
 .adventure-heading {
   margin: 20px 0;
 }
@@ -35,14 +33,14 @@
   margin-top: 10px;
 }
 
-/* ========================= */
 
-/* FILTERS (MOBILE FIRST) */
 
-/* ========================= */
+/* FILTERS (MOBILE ) */
+
+
 .adventure-filters {
   display: flex;
-  flex-wrap: wrap; /*  important for mobile */
+  flex-wrap: wrap; /*   for mobile */
   gap: 10px;
   margin: 20px 0;
 }
@@ -65,22 +63,20 @@
   border-color: #202020;
 }
 
-/* ========================= */
+
 
 /* GRID (MOBILE FIRST) */
 
-/* ========================= */
 .adventure-grid {
   display: grid;
   grid-template-columns: 1fr; /*  mobile */
   gap: 24px;
 }
 
-/* ========================= */
+
 
 /* CARD */
 
-/* ========================= */
 .adventure-card {
   display: flex;
   flex-direction: column;
@@ -117,11 +113,9 @@
   overflow: hidden;
 }
 
-/* ========================= */
 
 /* TABLET */
 
-/* ========================= */
 @media (width >= 768px) {
   .adventure-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -137,18 +131,16 @@
   }
 }
 
-/* ========================= */
 
 /* DESKTOP */
 
-/* ========================= */
 @media (width >= 1024px) {
   .filter-wrapper {
     padding: 0 76px;
   }
 
   .adventure-grid {
-    grid-template-columns: repeat(4, 1fr); /*  WKND layout */
+    grid-template-columns: repeat(4, 1fr); /*   layout */
     gap: 40px;
   }
 

@@ -1,19 +1,19 @@
-/* ========================= */
+
 
 /* WRAPPER */
 
-/* ========================= */
+
 .recent-articles-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 76px;
 }
 
-/* ========================= */
+
 
 /* HEADING */
 
-/* ========================= */
+
 #recent-article {
   font-size: 28px;
   font-family: Asar, serif;
@@ -31,22 +31,20 @@
   margin-top: 10px;
 }
 
-/* ========================= */
+
 
 /* GRID (MOBILE FIRST) */
 
-/* ========================= */
+
 .recent-articles.block {
   display: grid;
   grid-template-columns: 1fr; /*  mobile */
   gap: 20px;
 }
 
-/* ========================= */
 
 /* CARD */
 
-/* ========================= */
 .recent-articles.block > div {
   display: flex;
   flex-direction: column;
@@ -87,11 +85,9 @@
   overflow: hidden;
 }
 
-/* ========================= */
 
 /* BUTTON */
 
-/* ========================= */
 .all-articles-wrapper {
   margin-top: 30px;
 }
@@ -115,11 +111,9 @@
   text-transform: uppercase;
 }
 
-/* ========================= */
 
 /* TABLET */
 
-/* ========================= */
 @media (width >= 768px) {
   .recent-articles.block {
     grid-template-columns: repeat(2, 1fr);
@@ -131,14 +125,12 @@
   }
 }
 
-/* ========================= */
 
 /* DESKTOP */
 
-/* ========================= */
 @media (width >= 1024px) {
   .recent-articles.block {
-    grid-template-columns: repeat(4, 1fr); /* matches WKND */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
   }
 

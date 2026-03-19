@@ -13,7 +13,7 @@
 /* Inner layout */
 .feature.block > div {
   display: flex;
-  flex-direction: column; /*  mobile first */
+  flex-direction: column; /*  mobile  */
   background: #efefef;
 }
 

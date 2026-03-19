@@ -1,6 +1,6 @@
-/* =========================
-   MOBILE FIRST
-========================= */
+/* 
+   MOBILE 
+ */
 #faqs{
     font-size: 36px;
   font-weight: 500;
@@ -12,8 +12,6 @@
     content: "";
   display: block;
   width: 70px;
-
-  /* width:fit-content; */
   height: 2px;
   background-color: #ffea00;
   margin-top: 15px;
@@ -21,9 +19,9 @@
 }
 
 
-/* =========================
-   MOBILE FIRST
-========================= */
+/* 
+   MOBILE 
+ */
 
 .faq-layout {
   display: flex;
@@ -94,9 +92,9 @@
   margin-bottom: 8px;
 }
 
-/* =========================
+/* 
    TABLET
-========================= */
+ */
 
 @media (width >= 768px) {
   .faq-layout {
@@ -108,9 +106,9 @@
   }
 }
 
-/* =========================
+/* 
    DESKTOP
-========================= */
+ */
 
 @media (width >= 1024px) {
   .faq-layout {

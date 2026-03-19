@@ -1,8 +1,6 @@
-/* ========================= */
 
 /* BASE (MOBILE FIRST) */
 
-/* ========================= */
 
 .header-wrapper {
   height: 80px;
@@ -25,11 +23,9 @@
   width: 100%;
 }
 
-/* ========================= */
 
 /* NAV */
 
-/* ========================= */
 nav#nav {
   display: flex;
   align-items: center;
@@ -37,21 +33,18 @@ nav#nav {
   position: relative;
 }
 
-/* ========================= */
 
 /* LOGO */
 
-/* ========================= */
 .nav-logo svg {
   width: 90px;
   height: auto;
 }
 
-/* ========================= */
 
 /* HAMBURGER */
 
-/* ========================= */
+
 .nav-hamburger {
   display: flex;
 }
@@ -62,11 +55,10 @@ nav#nav {
   cursor: pointer;
 }
 
-/* ========================= */
 
 /* NAV MENU (MOBILE DROPDOWN) */
 
-/* ========================= */
+
 nav#nav .section {
   display: none;
   position: absolute;
@@ -102,11 +94,10 @@ nav#nav .default-content-wrapper a:hover {
   background: #ffea00;
 }
 
-/* ========================= */
 
 /* SEARCH */
 
-/* ========================= */
+
 .nav-search {
   display: flex;
   align-items: center;
@@ -124,11 +115,10 @@ nav#nav .default-content-wrapper a:hover {
   width: 100%;
 }
 
-/* ========================= */
 
 /* TABLET */
 
-/* ========================= */
+
 @media (width >= 768px) {
   .header-wrapper {
     height: 100px;
@@ -139,11 +129,10 @@ nav#nav .default-content-wrapper a:hover {
   }
 }
 
-/* ========================= */
 
 /* DESKTOP */
 
-/* ========================= */
+
 @media (width >= 1024px) {
   .header-wrapper {
     height: 120px;

@@ -65,7 +65,6 @@ export default async function decorate(block) {
       block.querySelectorAll('.adventure-filter')
         .forEach((f) => f.classList.remove('active'));
       filter.classList.add('active');
-      // renderCards(cat);
       renderCards(grid, items, cat);
     });
 

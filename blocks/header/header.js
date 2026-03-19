@@ -2,10 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
- * Decorates the header block.
- * Injects WKND logo and wires up hamburger toggle.
- * Works with the EDS default nav structure where
- * nav links are plain <p> tags in .default-content-wrapper
+
  * @param {HTMLElement} block The header block element
  */
 export default async function decorate(block) {
@@ -107,11 +104,6 @@ export default async function decorate(block) {
   const searchWrapper = document.createElement('div');
   searchWrapper.classList.add('nav-search');
 
-  /* <svg viewBox="0 0 24 24" width="16" height="16">
-      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
-      <line x1="16.5" y1="16.5" x2="22" y2="22"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg> */
   searchWrapper.innerHTML = `
   <span class="search-icon">
     <img src="/icons/search.svg" alt="Search" />
@@ -125,9 +117,8 @@ export default async function decorate(block) {
 
   block.append(nav);
 
-  // ==========================
   // SEARCH FUNCTIONALITY
-  // ==========================
+
   const searchInput = searchWrapper.querySelector('input');
 
   // Map of valid routes

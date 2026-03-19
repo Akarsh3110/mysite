@@ -1,18 +1,16 @@
-/* ========================= */
 
 /* WRAPPER */
 
-/* ========================= */
 .new-adventure-wrapper {
   width: 100%;
   padding: 0;
 }
 
-/* ========================= */
+
 
 /* HEADING */
 
-/* ========================= */
+
 #next-adventure {
   font-size: 32px;
   font-family: Asar, serif;
@@ -32,21 +30,19 @@
   padding-left: 76px;
 }
 
-/* ========================= */
 
 /* BLOCK LAYOUT (MOBILE FIRST) */
 
-/* ========================= */
 .new-adventure.block > div {
   display: flex;
   flex-direction: column; /*  mobile stack */
 }
 
-/* ========================= */
+
 
 /* IMAGE */
 
-/* ========================= */
+
 .new-adventure picture img {
   width: 100%;
   height: 260px;
@@ -54,11 +50,11 @@
   display: block;
 }
 
-/* ========================= */
+
 
 /* CONTENT */
 
-/* ========================= */
+
 .new-adventure.block > div > div:last-child {
   background: #fff;
   padding: 20px 16px;
@@ -92,11 +88,11 @@
   text-transform: uppercase;
 }
 
-/* ========================= */
+
 
 /* TABLET */
 
-/* ========================= */
+
 @media (width >= 768px) {
   .new-adventure picture img {
     height: 400px;
@@ -111,11 +107,9 @@
   }
 }
 
-/* ========================= */
 
 /* DESKTOP (WKND STYLE) */
 
-/* ========================= */
 @media (width >= 1024px) {
   .new-adventure-wrapper {
     padding: 0;
