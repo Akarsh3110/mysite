@@ -17,9 +17,9 @@ export default function renderCards(grid, items, category) {
     card.className = 'adventure-card';
 
     card.innerHTML = `
-      <img src="${item.image}" alt="${item.head || ''}">
-      <h3>${item.head}</h3>
-      <p>${item.des}</p>
+      <img src="${item.image}" alt="${item.title || ''}">
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
     `;
 
     grid.appendChild(card);

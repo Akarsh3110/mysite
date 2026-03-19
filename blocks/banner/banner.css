@@ -3,7 +3,7 @@
 /* WRAPPER */
 
 /* ========================= */
-.go-wrapper {
+.banner-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 76px;
@@ -28,7 +28,7 @@
 /* GRID (MOBILE FIRST) */
 
 /* ========================= */
-.go.block {
+.banner.block {
   display: grid;
   grid-template-columns: 1fr; /*  mobile */
   gap: 20px;
@@ -39,7 +39,7 @@
 /* CARD */
 
 /* ========================= */
-.go.block > div {
+.banner.block > div {
   display: flex;
   flex-direction: column;
 }
@@ -50,7 +50,7 @@
 /* IMAGE */
 
 /* ========================= */
-.go.block picture img {
+.banner.block picture img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -62,12 +62,12 @@
 /* TEXT */
 
 /* ========================= */
-.go.block > div > div:last-child {
+.banner.block > div > div:last-child {
   margin-top: 12px;
 }
 
 /* TITLE */
-.go.block p strong {
+.banner.block p strong {
   display: block;
   font-size: 14px;
   font-weight: 700;
@@ -77,7 +77,7 @@
 }
 
 /* DESCRIPTION */
-.go.block > div > div:last-child p:last-child {
+.banner.block > div > div:last-child p:last-child {
   font-size: 12px;
   color: #777;
   line-height: 1.5;
@@ -93,7 +93,7 @@
 
 /* ========================= */
 @media (width >= 768px) {
-  .go.block {
+  .banner.block {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
@@ -105,12 +105,12 @@
 
 /* ========================= */
 @media (width >= 1024px) {
-  .go.block {
+  .banner.block {
     grid-template-columns: repeat(4, 1fr); /*  matches WKND */
     gap: 30px;
   }
 
-  .go.block picture img {
+  .banner.block picture img {
     height: 180px;
   }
 }
